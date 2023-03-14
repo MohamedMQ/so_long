@@ -65,6 +65,9 @@ void	fast_check_3(t_data *data)
 			if ((data->m_p.ptr[i][j] != '1' && i == 0)
 				|| (data->m_p.ptr[i][j] != '1' && i == stock))
 				eroor_map(data);
+			if (data->m_p.ptr[i][0] != '1' || data->m_p.ptr[i][data->m_p.x
+				- 1] != '1')
+				eroor_map(data);
 			j++;
 		}
 		i++;
