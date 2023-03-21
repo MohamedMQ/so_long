@@ -18,7 +18,7 @@ t_data	all_img_con_2(t_data data)
 	data.p_l.img_player = "./textures/player.XPM";
 	data.p_l.img_player_2 = "./textures/player_2.XPM";
 	data.b_x.img_box = "./textures/box.XPM";
-	data.c_o.img_coin = "./textures/coin.XPM";
+	data.c_o.img_coin = "./textures/coin3.XPM";
 	data.d_r.img_door = "./textures/door.XPM";
 	data.win.img_door = "./textures/win.XPM";
 	data.floor.img_floor = "./textures/floor.XPM";
