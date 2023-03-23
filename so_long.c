@@ -75,17 +75,30 @@ t_data	get_wid_hei(t_data data, char *argv)
 	return (data);
 }
 
+int	close_window(t_data *data)
+{
+	mlx_destroy_window(data->data_2.mlx, data->w_n.mlx_win);
+	exit(0);
+}
+
 int	main(int argc, char *argv[])
 {
 	t_data	data;
+	int		i;
 
 	if (argc != 2)
 		return (1);
+	i = 0;
 	initialize_some_struct(&data);
 	check_name_map(argv[1]);
 	data = get_wid_hei(data, argv[1]);
 	data = get_map_ptr(data, argv[1]);
 	check_map(&data);
 	check_path(&data, argv[1]);
+	data = all_img_con(data);
+	display_all_window(9, &data);
+	mlx_hook(data.w_n.mlx_win, 2, 0, ft_check_and_display, &data);
+	mlx_hook(data.w_n.mlx_win, 17, 0, close_window, &data);
+	mlx_loop(data.data_2.mlx);
 	return (0);
 }

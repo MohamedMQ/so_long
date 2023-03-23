@@ -63,6 +63,15 @@ void	eroor_map(t_data *data)
 	exit(1);
 }
 
+void	check_esp(int keycode, t_data *data)
+{
+	if (keycode == 53)
+	{
+		mlx_destroy_window(data->data_2.mlx, data->w_n.mlx_win);
+		exit(0);
+	}
+}
+
 t_data	get_map_ptr(t_data data, char *argv)
 {
 	int	i;
