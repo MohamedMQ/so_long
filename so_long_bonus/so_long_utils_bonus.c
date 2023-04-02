@@ -61,6 +61,8 @@ void	eroor_map(t_data *data)
 		free(data->m_p.ptr_2);
 	ft_printf("Error\n");
 	ft_printf("you have error in your map\n");
+	if (data->m_p.ptr_2)
+		free(data->m_p.ptr_2);
 	exit(1);
 }
 
