@@ -29,7 +29,7 @@ The aim of the mandatory part is to create a 2D game where any hero collects any
 >- **A** for an enemy patrol (for the bonus part).
 ## Compilation
 ```
-make bonus
+make
 ```
 ## Usage
 ```
